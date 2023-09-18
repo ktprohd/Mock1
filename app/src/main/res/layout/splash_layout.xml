@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_note"
+        android:layout_width="247dp"
+        android:layout_height="212dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Game"
+        android:textColor="#FF9100"
+        android:textSize="30dp"
+        android:textStyle="bold"
+       android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="177dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo1"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginBottom="-20dp"
+            android:layout_alignParentBottom="true"
+            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="26dp"
+        android:background="#E65100"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in here"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:alpha="0.7"
+        android:shadowRadius="50"
+        android:textColor="@color/black"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:placeholderTextColor="@color/black"
+            app:startIconDrawable="@drawable/ic_email">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:id="@+id/edtusername"
+            android:padding="5dp"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/black"
+            app:startIconDrawable="@drawable/ic_lock"
+            app:endIconMode="password_toggle"
+            app:endIconDrawable="@drawable/ic_eye">
+            <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20dp"
+            android:inputType="textPassword"
+            android:id="@+id/edtpassword"
+            android:padding="5dp"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remember me"
+                android:alpha="0.7"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forgotpass"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I forgot my password"
+                /></LinearLayout>
+
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_login1"
+            android:text="Login"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_style"
+            android:layout_gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_style"
+
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_google"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_login2"
+            android:text="Continute with Google"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            android:background="@drawable/btn_style"
+            android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/txtSignup"
+                android:layout_marginLeft="60dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+    </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>

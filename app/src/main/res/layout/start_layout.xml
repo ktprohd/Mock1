@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E65100"
+        android:padding="10dp"
+        android:text="    My Quiz Game"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        ></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/txtwelcom"
+        android:textSize="20dp"/>
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/startquiz"
+        android:text="Start Quiz"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_style1"
+        android:layout_gravity="center"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+    android:layout_width="250dp"
+    android:layout_height="50dp"
+    android:id="@+id/btnsignout"
+    android:text="Sign Out"
+    android:textColor="@color/white"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/btn_style1"
+    android:layout_gravity="center"
+    />
+
+</LinearLayout>

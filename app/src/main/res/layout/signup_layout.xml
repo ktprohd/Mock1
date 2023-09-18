@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E65100"
+        android:padding="10dp"
+        android:text="My Quiz Game"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"
+       ></TextView>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_back"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp"
+        android:background="#E65100"
+        android:id="@+id/icback"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_marginTop="15dp"
+
+        android:layout_gravity="center"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        android:id="@+id/signupname"
+        android:background="@drawable/edt_style1"
+        android:hint="Email"
+        android:padding="5dp"
+        android:drawableLeft="@drawable/ic_email"
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"/>
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:id="@+id/signuppass"
+        android:hint="Password"
+        android:background="@drawable/edt_style1"
+        android:padding="5dp"
+        android:drawableEnd="@drawable/ic_eye"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edt_style"
+        android:text="Sign Up"
+        android:id="@+id/signup"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+</LinearLayout>

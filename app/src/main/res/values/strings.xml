@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mock1</string>
+    <string name="sign_up">Don\'t you have an account yet? <u><i>Sign up</i></u></string>
+    <string name="default_web_client_id">666450439159-epvhmrkaafbiqgfid23dakss3jaqqme7.apps.googleusercontent.com</string>
+    <string name="timeup">Time up. Please click Next to go next question</string>
+    <string name="alertmessage">Congratulations!!! + \n You have answered all the questions. Do you want to see the result?</string>
+</resources>
