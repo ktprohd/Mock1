@@ -1,6 +1,5 @@
 package com.example.mock1
 
-import com.example.mock1.Model.User
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +16,7 @@ import android.os.Looper
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.example.mock1.Model.Score
+import com.example.mock1.Model.User
 import com.google.firebase.auth.ktx.auth
 
 class QuizActivity : AppCompatActivity() {
@@ -43,7 +43,6 @@ class QuizActivity : AppCompatActivity() {
         binding.progessbar.visibility = View.VISIBLE
         binding.layoutquestion.visibility = View.GONE
         readData("$i")
-        i++
         timer()
         binding.btnnext.setOnClickListener {
             handler.post {
@@ -53,9 +52,9 @@ class QuizActivity : AppCompatActivity() {
                 binding.txvcorrect.text= correct.toString()
                 binding.txvwrong.text= wrong.toString()
 
-                if (i < 4) {
-                    readData("$i")
+                if (i < 3) {
                     i++
+                    readData("$i")
                 } else{
                     i=1
                     alertDialog()
@@ -112,7 +111,7 @@ class QuizActivity : AppCompatActivity() {
         }
 
         binding.btnfinish.setOnClickListener {
-          i=4
+          i=3
           binding.btnnext.performClick()
         }
     }
@@ -211,13 +210,14 @@ class QuizActivity : AppCompatActivity() {
         countDownTimer = object: CountDownTimer(7000,1000) {
             override fun onTick(p0: Long) {
                 binding.timer.text = "${p0/1000}"
+                binding.txvcorrect.text= correct.toString()
             }
             override fun onFinish() {
                 binding.timer.text = "0"
                 binding.edtquestion.text = resources.getString(R.string.timeup)
-                checkAnswered()
                 handler.postDelayed({
                     // Thực hiện tác vụ bạn muốn sau khi đã trôi qua khoảng thời gian delayMillis
+                    checkAnswered()
                     binding.btnnext.performClick()
                 }, 4000)
             }
